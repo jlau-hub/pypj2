@@ -1,0 +1,65 @@
+paths:
+  database: data/market.db
+  reports: reports
+  logs: logs
+
+browser:
+  headless: true
+  login_timeout: 15
+  binary_path: ""        # 可填 /usr/bin/chromium-browser 或 chrome 路徑
+  driver_path: ""        # 可填 /usr/bin/chromedriver；留空由 Selenium Manager 處理
+
+scrape:
+  delay: 1.0             # rate-limit（秒）
+  timeout: 30
+  max_pages: 20
+  respect_robots: true
+  user_agent: "MarketIntelBot/1.0 (student project)"
+
+targets:
+  - name: demo_competitor
+    login_url: http://127.0.0.1:5000/login
+    username: analyst
+    password: demo123
+    user_field: username
+    pass_field: password
+    submit_selector: "button[type=submit]"
+    login_success_marker: /products
+    start_url: http://127.0.0.1:5000/products
+    row_selector: "table#products tbody tr"
+    next_selector: "a.next"
+    news_url: http://127.0.0.1:5000/news
+    article_selector: "article"
+    article_title_selector: "h2"
+    article_date_selector: "time"
+    article_content_selector: "div.content"
+
+ai:
+  provider: ollama
+  base_url: http://localhost:11434
+  model: qwen2.5:1.5b
+  timeout: 120
+  retries: 1
+  max_chars: 4000
+  keep_alive: "30m"
+  num_predict: 500
+  num_ctx: 2048
+  temperature: 0.2
+  num_gui: 0
+  num_parallel: 1
+
+report:
+  top_movers: 10
+
+email:
+  enabled: false         # true + dry_run true → 產 .eml 示範檔
+  dry_run: true
+  smtp_host: smtp.example.com
+  smtp_port: 587
+  use_tls: true
+  username: ""
+  password: ""
+  sender: "MarketIntel System <no-reply@marketintel.local>"
+  recipients:
+    - "Manager <manager@example.com>"
+    - "Analyst <analyst@example.com>"

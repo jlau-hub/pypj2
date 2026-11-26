@@ -1,0 +1,14 @@
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull qwen2.5:1.5b
+bash scripts/setup_ubuntu.sh
+source venv/bin/activate
+
+# Terminal 1：啟動本機示範目標站（合規、可重複）
+python demo_site/app.py
+
+# Terminal 2：完整流程（登入→收集→清洗→分析→AI→報告）
+python main.py run
+python main.py run                        # 第二次 run → 產生價格漲跌比較
+python main.py runs                       # run 歷史
+python main.py analyze --run 2
+python main.py report --run 2

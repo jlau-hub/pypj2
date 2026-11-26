@@ -1,0 +1,24 @@
+2026-11-25 10:29:47,376 [INFO] modules.browser: 登入成功：demo_competitor（截圖 /home/jlau/pypj2/logs/login_demo_competitor.png）
+2026-11-25 10:29:47,596 [INFO] modules.scraper: 收集第 1 頁：http://127.0.0.1:5000/products?page=2（累計 8 筆）
+2026-11-25 10:29:48,602 [INFO] modules.scraper: 收集第 2 頁：http://127.0.0.1:5000/products?page=3（累計 16 筆）
+2026-11-25 10:29:49,608 [INFO] modules.scraper: 收集第 3 頁：結束（累計 24 筆）
+2026-11-25 10:31:29,603 [INFO] modules.pipeline: run 1 完成：3 頁 / 原始 24 / 清洗 24 / 文章 4
+2026-11-25 10:31:30,259 [INFO] modules.analyzer: 已產生圖表：chart_category_run1.png
+2026-11-25 10:31:30,368 [INFO] modules.analyzer: 已產生圖表：chart_movers_run1.png
+2026-11-25 10:35:15,657 [INFO] modules.report_builder: 報告已產生：/home/jlau/pypj2/reports/市場分析報告_20261125_run1.docx
+2026-11-25 10:35:15,772 [INFO] modules.notifier: Digest saved to /home/jlau/pypj2/reports/digest_run1_20261125.eml
+2026-11-25 11:57:08,685 [INFO] modules.browser: 登入成功：demo_competitor（截圖 /home/jlau/pypj2/logs/login_demo_competitor.png）
+2026-11-25 11:57:08,952 [INFO] modules.scraper: 收集第 1 頁：http://127.0.0.1:5000/products?page=2（累計 8 筆）
+2026-11-25 11:57:09,961 [INFO] modules.scraper: 收集第 2 頁：http://127.0.0.1:5000/products?page=3（累計 16 筆）
+2026-11-25 11:57:10,969 [INFO] modules.scraper: 收集第 3 頁：結束（累計 24 筆）
+2026-11-25 11:57:31,522 [INFO] modules.pipeline: run 2 完成：3 頁 / 原始 24 / 清洗 24 / 文章 4
+2026-11-25 11:57:32,032 [INFO] modules.analyzer: 已產生圖表：chart_category_run2.png
+2026-11-25 11:57:32,333 [INFO] modules.analyzer: 已產生圖表：chart_movers_run2.png
+2026-11-25 11:58:27,912 [INFO] modules.report_builder: 報告已產生：/home/jlau/pypj2/reports/市場分析報告_20261125_run2.docx
+2026-11-25 11:58:27,935 [INFO] modules.notifier: Digest saved to /home/jlau/pypj2/reports/digest_run2_20261125.eml
+2026-11-25 12:14:34,641 [INFO] modules.analyzer: 圖表已存在，跳過：chart_category_run2.png
+2026-11-25 12:14:34,642 [INFO] modules.analyzer: 圖表已存在，跳過：chart_movers_run2.png
+2026-11-25 12:26:25,322 [INFO] modules.analyzer: 圖表已存在，跳過：chart_category_run2.png
+2026-11-25 12:26:25,323 [INFO] modules.analyzer: 圖表已存在，跳過：chart_movers_run2.png
+2026-11-25 12:27:05,005 [INFO] modules.report_builder: 報告已產生：/home/jlau/pypj2/reports/市場分析報告_20261125_run2.docx
+2026-11-25 12:27:05,031 [INFO] modules.notifier: Digest saved to /home/jlau/pypj2/reports/digest_run2_20261125.eml
